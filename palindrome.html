@@ -14,8 +14,6 @@
         function ReverseString(str) {
             return str.split('').reverse().join('')
         }
-
-        // Function call  
         document.write(ReverseString("Hi there, this is Lakshmi"));
 
 
@@ -29,6 +27,7 @@
 
         document.write('<br>');
         document.writeln('<b>' + Reverse("Wassup") + '</b>')
+        document.write('<br>');
 
         // palindrome
         function palindrome(str1) {
@@ -38,6 +37,29 @@
             return reverseStr === lowRegStr;
         }
         document.write(palindrome("A man, a plan, a canal. Panama"));
+        document.write('<br>');
+
+        // Armstrong number
+        function armstrong(num) {
+
+            var digits = num.toString().split('')
+            var realDigits = num
+            var a = 0
+
+            for (let i = 0; i < digits.length; i++) {
+                digits[i] = Math.pow(digits[i], digits.length)
+                a += digits[i]
+            }
+
+            if (a == realDigits) {
+                document.write("Number is armstrong")
+            } else if (a != realDigits) {
+                document.write("Number is not armstrong")
+            }
+        }
+        armstrong(45)
+        document.write('<br>');
+        armstrong(371)
 
     </script>
 </body>
