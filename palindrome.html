@@ -10,42 +10,34 @@
     <p id="ReverseString"> </p>
 
     <script>
-
-        // Function to reverse string 
+        // Reverse string
         function ReverseString(str) {
             return str.split('').reverse().join('')
         }
 
         // Function call  
-        document.write(ReverseString("Hi there, this is Lakshmi"));      
+        document.write(ReverseString("Hi there, this is Lakshmi"));
 
-        function ReverseString(str) {
 
-            // // Check input 
-            // if (!str || str.length < 2 ||
-            //     typeof str !== 'string') {
-            //     return 'Not valid';
-            // }
-
-            // // Take empty array revArray 
-            // const revArray = [];
-            // const length = str.length - 1;
-
-            // // Looping from the end 
-            // for (let i = length; i >= 0; i--) {
-            //     revArray.push(str[i]);
-            // }
-
-            // // Joining the array elements 
-            // return revArray.join('');
-            var revStr="";
-            for(var i=str.length-1;i>=0;i++){
-                revStr+=str[i];
+        function Reverse(str) {
+            var revStr = "";
+            for (var i = str.length - 1; i >= 0; i--) {
+                revStr += str[i];
             }
             return revStr;
         }
 
-        document.write(ReverseString("Wassup"))
+        document.write('<br>');
+        document.writeln('<b>' + Reverse("Wassup") + '</b>')
+
+        // palindrome
+        function palindrome(str1) {
+            var re = /[^A-Za-z0-9]/g;  // used a regular expressions
+            var lowRegStr = str1.toLowerCase().replace(re, '');
+            var reverseStr = lowRegStr.split('').reverse().join('');
+            return reverseStr === lowRegStr;
+        }
+        document.write(palindrome("A man, a plan, a canal. Panama"));
 
     </script>
 </body>
