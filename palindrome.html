@@ -76,9 +76,19 @@
             return b;
         }
         document.write(fibonacci(4))
-
+        document.write('<br>')
         // prime number
-        
+        function isPrime(value) {
+            for (var i = 2; i < value; i++) {
+                if (value % i === 0) {
+                    return false;
+                }
+            }
+            return value > 1;
+        }
+        document.write(isPrime(4))
+        document.write('<br>')
+        document.write(isPrime(2))
     </script>
 </body>
 
