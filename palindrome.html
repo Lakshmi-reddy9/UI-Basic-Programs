@@ -60,7 +60,25 @@
         armstrong(45)
         document.write('<br>');
         armstrong(371)
+        document.write('<br>')
 
+        // Fibonacci series
+        function fibonacci(num1) {
+            var a = 1, b = 0, temp;
+
+            while (num1 >= 0) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                num1--;
+            }
+
+            return b;
+        }
+        document.write(fibonacci(4))
+
+        // prime number
+        
     </script>
 </body>
 
