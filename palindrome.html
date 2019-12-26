@@ -77,6 +77,7 @@
         }
         document.write(fibonacci(4))
         document.write('<br>')
+
         // prime number
         function isPrime(value) {
             for (var i = 2; i < value; i++) {
@@ -89,6 +90,37 @@
         document.write(isPrime(4))
         document.write('<br>')
         document.write(isPrime(2))
+        document.write('<br>')
+
+        // ascending function
+
+        var dates = [{ firstName: "praveen", lastName: "kumar", joinDate: "09-28-2018" },
+        { firstName: "praveen1", lastName: "kumar", joinDate: "09-28-2017" }]
+        
+        var fullname = dates.map(function(full){
+            
+            return `${full.firstName} ${full.lastName}`
+
+        } );
+        console.log(fullname);
+        
+        // ascending order
+        dates.sort(function (a, b) {
+            return new Date(a.joinDate) - new Date(b.joinDate);
+
+        });
+        console.log(dates)
+
+        
+        
+        
+
+
+
+
+
+
+
     </script>
 </body>
 
